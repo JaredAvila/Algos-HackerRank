@@ -22,7 +22,7 @@ const recursiveBinary = (arr, value, start, end) => {
   if (start > end) {
     return -1;
   }
-  let mid = start + Math.floor((end - start) / 2);
+  let mid = Math.floor((end + start) / 2);
   if (arr[mid] === value) {
     return mid;
   } else if (arr[mid] < value) {
@@ -34,3 +34,4 @@ const recursiveBinary = (arr, value, start, end) => {
 
 let myArray = [1, 2, 3, 6, 10, 14, 16, 18, 21, 24, 27, 34, 67];
 let myVal = 34;
+console.log(recursiveBinary(myArray, myVal, 0, myArray.length - 1));
