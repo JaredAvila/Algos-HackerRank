@@ -1,3 +1,6 @@
+//recursive solution
+// 140ms runtime
+//O(2^n)
 const helper = (arr, target, index) => {
   for (let i = index + 1; i < arr.length; i++) {
     if (arr[index] + arr[i] == target) {
@@ -16,6 +19,9 @@ const twoSum = (arr, target) => {
   return helper(arr, target, index);
 };
 
+// Dynamic Solution
+// 68ms runtime
+//O(n)
 const twoSumDP = function(nums, target) {
   let memo = {};
   for (let i = 0; i < nums.length; i++) {
