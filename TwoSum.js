@@ -16,6 +16,18 @@ const twoSum = (arr, target) => {
   return helper(arr, target, index);
 };
 
+const twoSumDP = function(nums, target) {
+  let memo = {};
+  for (let i = 0; i < nums.length; i++) {
+    let comp = target - nums[i];
+    if (memo[comp] != null) {
+      return [memo[comp], i];
+    }
+    memo[nums[i]] = i;
+  }
+  return [];
+};
+
 let myArr = [4, 2, 5, 9, 8, 6, 4];
-let target = 20;
-console.log(twoSum(myArr, target));
+let target = 10;
+console.log(twoSumDP(myArr, target));
