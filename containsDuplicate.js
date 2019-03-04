@@ -1,4 +1,4 @@
-// O(n), 96ms runtime
+// O(n), 76ms runtime
 
 const containsDuplicate = nums => {
   if (nums.length <= 1) {
@@ -15,11 +15,12 @@ const containsDuplicate = nums => {
   return false;
 };
 
+const nums = [1, 2, 3, 5];
 // const arr1 = ["a", "r", "z", "q", "b"];
-// const arr2 = ["v", "s", "f", "h", "r"];
+// const arr2 = ["v", "s", "f", "h", "h"];
 
-// function containstDuplicate(arr1, arr2) {
+// function containsDuplicate3(arr1, arr2) {
 //   return arr1.some(item => arr2.includes(item));
 // }
 
-// containstDuplicate(arr1, arr2);
+console.log(containsDuplicate(nums));
