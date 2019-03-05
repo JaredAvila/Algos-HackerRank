@@ -57,6 +57,22 @@ class SLL {
     }
     return currentNode;
   }
+  reverse() {
+    if (!this.head.next) {
+      return this;
+    }
+    let first = this.head;
+    let second = this.head.next;
+    this.tail = this.head;
+    while (second) {
+      let temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null;
+    this.head = first;
+  }
 }
 
 class Node {
