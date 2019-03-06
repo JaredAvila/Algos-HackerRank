@@ -1,3 +1,5 @@
+//Recursively
+
 function findFactorial(num) {
   if (typeof num !== "number") {
     return false;
@@ -11,4 +13,14 @@ function findFactorial(num) {
     }
   }
 }
-console.log(findFactorial(5));
+
+//Iteratively
+
+// function findFactorial(num) {
+//   let total = num;
+//   for (let i = num; i > 1; i--) {
+//     total *= i - 1;
+//   }
+//   return total;
+// }
+console.log(findFactorial(3));
