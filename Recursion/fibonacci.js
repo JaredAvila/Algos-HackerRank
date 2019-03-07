@@ -17,4 +17,23 @@ function iterativeFib(n) {
   return arr[n];
 }
 
-console.log(fib(5));
+//Memoized Solution
+
+function fibMemoized() {
+  let memo = {};
+  return function fibM(n) {
+    if (n in memo) {
+      return memo[n];
+    } else {
+      if (n < 2) {
+        return n;
+      } else {
+        memo[n] = fibM(n - 1) + fibM(n - 2);
+        return memo[n];
+      }
+    }
+  };
+}
+
+const fasterFib = fibMemoized();
+console.log(fasterFib(100));
