@@ -14,11 +14,9 @@ class bST {
     if (this.root === null) {
       this.root = new Node(value);
     } else {
-      let currentValue,
-        currentNode = this.root;
+      let currentNode = this.root;
       while (currentNode) {
-        currentValue = currentNode.value;
-        if (value < currentValue) {
+        if (value < currentNode.value) {
           if (currentNode.left === null) {
             currentNode.left = new Node(value);
             break;
