@@ -34,7 +34,25 @@ class bST {
       }
     }
   }
-  lookup(value) {}
+  lookup(value) {
+    if (this.root === null) {
+      return false;
+    } else {
+      let currentNode = this.root;
+      while (currentNode) {
+        if (currentNode.value > value) {
+          //left
+          currentNode = currentNode.left;
+        } else if (currentNode.value < value) {
+          //right
+          currentNode = currentNode.right;
+        } else if (currentNode.value === value) {
+          return currentNode;
+        }
+      }
+      return false;
+    }
+  }
 }
 
 const tree = new bST();
@@ -58,4 +76,5 @@ const traverse = node => {
   return tree;
 };
 
-console.log(JSON.stringify(traverse(tree.root)));
+// console.log(JSON.stringify(traverse(tree.root)));
+console.log(tree.lookup(20));
