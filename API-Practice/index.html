@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>XHR Playground</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="buttons">
+        <button id="getBtn" class="btn btn-blue">Get Posts</button>
+        <button id="postBtn" class="btn btn-yellow">Create New</button>
+      </div>
+      <form id="myForm">
+        <input type="text" placeholder="Title" />
+        <input type="text" placeholder="User ID" />
+        <textarea cols="30" rows="10" placeholder="Post"></textarea>
+        <input class="btn btn-green" type="submit" value="Submit" />
+      </form>
+      <p id="error"></p>
+      <p id="success"></p>
+      <div id="resCont" class="resContainer">
+        <ul id="responses"></ul>
+      </div>
+    </main>
+    <script src="xhr.js"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgb(221, 221, 221);
+}
+
+.buttons {
+    margin: 10px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    background-color: grey;
+    color: rgb(29, 29, 29);
+    border: 1px solid rgb(29, 29, 29);
+    outline: none;
+    cursor: pointer;
+    box-shadow: 3px 0 8px rgba(63, 63, 63, 0.61);
+    transition: all 250ms ease;
+}
+
+.btn:active {
+    box-shadow: 1px 0 4px rgba(15, 15, 15, 0.61);
+}
+
+.btn-green {
+    background-color: rgb(115, 189, 115);
+}
+
+.btn-green:hover {
+    background-color: rgb(162, 233, 162);
+}
+
+.btn-yellow {
+    background-color: rgb(189, 209, 100);
+}
+
+.btn-yellow:hover {
+    background-color: rgb(226, 243, 152);
+}
+
+.btn-blue {
+    background-color: rgb(100, 147, 209);
+}
+
+.btn-blue:hover {
+    background-color: rgb(140, 185, 243);
+}
+
+#myForm {
+    display: none;
+    flex-flow: column;
+    width: 300px;
+    padding: 30px;
+}
+
+#myForm input, #myForm textarea {
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid rgb(44, 44, 44);
+    padding: 5px;
+    font-size: 12pt;
+    font: inherit;
+}
+
+#error {
+    color: red;
+}
+
+#success {
+    color: rgb(0, 115, 160);
+}
+
+#resCont {
+    display: none;
+}
+
+.resContainer {
+    height: 500px;
+    overflow: scroll;
+}
+
+.post {
+    width: 700px;
+    margin: 10px 0;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+}
+
+.post h2 {
+    color: rgb(0, 115, 160);
+}
