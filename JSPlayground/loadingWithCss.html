@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Loading with CSS</title>
+  </head>
+  <body>
+    <div class="bar-container">
+      <div id="bar" class="bar"></div>
+    </div>
+    <button onclick="fillBar(2)">Start</button>
+
+    <script>
+        
+      function fillBar(s) {
+        const bar = document.getElementById("bar");
+        if (bar.style.width === "100%") {
+          bar.style.width = 0;
+        } else {
+          bar.style.width = "100%";
+        }
+        console.log(bar.style.width);
+
+        bar.style.transition = `${s}s linear all`;
+      }
+    </script>
+
+    <style>
+      .bar-container {
+        background-color: rgb(192, 192, 192);
+        height: 30px;
+        width: 200px;
+        margin: 25px;
+      }
+      .bar {
+        background-color: green;
+        height: 100%;
+        width: 0;
+      }
+    </style>
+  </body>
+</html>
